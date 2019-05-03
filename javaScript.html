@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>javaScript</title>
+		<script>
+		    function showAge(obj) {
+			   var target = document.getElementById("msg");
+			   if(obj.value && obj.value !=="") {
+			       var s = new Date().getFullYear() - obj.value.substring(0,4);
+			       target.innerHTML = "あなたは" + s + "サイですね。"
+			   }
+			}
+		</script>
+    </head>
+    <body>
+		生年月日：<input type="date" onchange="showAge(this)" /><br/>
+		<div id="msg"></div>
+    </head>
+</html>
